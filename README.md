@@ -9,3 +9,4 @@
 - Banco de dados relacional na nuvem AWS RDS com Mysql
 - Sistemas de arquivos nuvem Amazon Elastic File System (EFS)
 
+## 1. Criando a VPC (Virtual Private Cloud)

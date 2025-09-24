@@ -9,6 +9,8 @@ export DB_USER=$(aws ssm get-parameter --name "/wordpress/db_user" --with-decryp
 export DB_PASSWORD=$(aws ssm get-parameter --name "/wordpress/db_password" --with-decryption --query Parameter.Value --output text)
 export DB_NAME=$(aws ssm get-parameter --name "/wordpress/db_name" --with-decryption --query Parameter.Value --output text)
 
+export ALB_DNS_NAME=$(aws ssm get-parameter --name "/wordpress/alb_dns" --with-decryption --query Parameter.Value --output text)
+
 export EFS_FILE_SYSTEM_ID=$(aws ssm get-parameter --name "/wordpress/efs" --with-decryption --query Parameter.Value --output text)
 EFS_MOUNT_POINT="/mnt/efs"
 WORDPRESS_DATA_DIR="${EFS_MOUNT_POINT}/wordpress"
